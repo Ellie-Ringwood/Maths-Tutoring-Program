@@ -1,0 +1,30 @@
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.exe
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.deps.json
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.runtimeconfig.json
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.dll
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.pdb
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.csproj.AssemblyReference.cache
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.AssemblyInfoInputs.cache
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.AssemblyInfo.cs
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.csproj.CoreCompileInputs.cache
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.dll
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\refint\Maths Tutoring Program.dll
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.pdb
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.genruntimeconfig.cache
+C:\Users\elrin\source\repos\Maths Tutoring Program\Maths Tutoring Program\obj\Debug\net6.0\ref\Maths Tutoring Program.dll
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.exe
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.deps.json
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.runtimeconfig.json
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.dll
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\bin\Debug\net6.0\Maths Tutoring Program.pdb
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.csproj.AssemblyReference.cache
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.AssemblyInfoInputs.cache
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.AssemblyInfo.cs
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.csproj.CoreCompileInputs.cache
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.dll
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\refint\Maths Tutoring Program.dll
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.pdb
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\Maths Tutoring Program.genruntimeconfig.cache
+C:\Users\elrin\source\repos\Maths-Tutoring-Program\Maths Tutoring Program\obj\Debug\net6.0\ref\Maths Tutoring Program.dll
