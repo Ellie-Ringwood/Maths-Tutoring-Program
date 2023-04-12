@@ -11,11 +11,11 @@ namespace Maths_Tutoring_Program
         public override int Value
         {
             get { return _value; }
-            set { if (value < 13 && value > 0) { _value = value; } } //checks the value is valid
+            set {_value = value; } //checks the value is valid
         }
         public override void PrintCard()
         {
-            Console.WriteLine(Value.ToString());
+            Console.Write(Value.ToString());
         }
     }
 }

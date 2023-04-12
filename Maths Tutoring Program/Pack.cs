@@ -30,7 +30,7 @@ namespace Maths_Tutoring_Program
             }
             else
             {
-                for (int operation = 0; operation < 3; operation++) // creates pack of 4 cards of operations
+                for (int operation = 0; operation < 4; operation++) // creates pack of 4 cards of operations
                 {
                     OperationCard operationCard = new OperationCard();
                     operationCard.Value = operation;
@@ -51,11 +51,6 @@ namespace Maths_Tutoring_Program
                 _pack.RemoveAt(num);
             }
             _pack = tempPack;
-        }
-        public Card DealOneCard()
-        {
-            Card tempCard = _pack.ElementAt(0);
-            return tempCard;
         }
 
         public List<Card> DealCards(int amount)

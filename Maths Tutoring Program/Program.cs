@@ -1,4 +1,4 @@
 ﻿using Maths_Tutoring_Program;
 
 Menu menu = new();
-menu.UserInput();
+menu.MenuInput();
