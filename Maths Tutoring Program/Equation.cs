@@ -114,7 +114,6 @@ namespace Maths_Tutoring_Program
                     {
                         Console.WriteLine(" Division by zero. Answer not possible");
                     }
-
                     break;
                 default:
                     break;

@@ -8,12 +8,28 @@ namespace Maths_Tutoring_Program
 {
     internal class Menu
     {
-        
+        public string userName;
+        public int corrects;
+        public int incorrects;
         public Tutorial tutorial = new Tutorial();
         public Equation equation = new Equation();
+        public Statistics stats = new Statistics();
         public Menu()
         {
             Console.WriteLine("Welcome to The LinCode Mathematics Tutoring Program");
+            Console.WriteLine("Enter Username: ");
+            while (true)
+            {
+                userName = Console.ReadLine();
+                if (userName == "") 
+                {
+                    Console.WriteLine("Username must not be empty, Enter again: ");
+                }
+                else
+                {
+                    break;
+                }
+            }
             tutorial.PrintInstructions();
         }
 
@@ -22,7 +38,7 @@ namespace Maths_Tutoring_Program
             bool running = true;
             while (running == true)
             {
-                Console.WriteLine("\nMenu:\n1: Instructions\n2: Deal 3 cards (2 numbers and an operation)\n3: Deal 5 cards (3 numbers and 2 operations)\n4: Stop program");
+                Console.WriteLine("\nMenu:\n1: Instructions\n2: Deal 3 cards (2 numbers and an operation)\n3: Deal 5 cards (3 numbers and 2 operations)\n4: LeaderBoard \n5: Stop program");
                 switch (Console.ReadLine())
                 {
                     case "1":
@@ -35,6 +51,16 @@ namespace Maths_Tutoring_Program
                         AskQuestion(3);
                         break;
                     case "4":
+                        stats.PrintStats();
+                        break;
+                    case "5":
+                        float percentage = 0.0f;
+                        if (corrects+incorrects != 0)
+                        {
+                            percentage = ((float) corrects / (corrects + incorrects)) * 100;
+                            Console.WriteLine(percentage);
+                        }
+                        stats.addStatistic(userName,corrects,incorrects,percentage);
                         running = false;
                         Console.WriteLine("Goodbye from The LinCode Mathematics Tutoring Program");
                         break;
@@ -66,10 +92,12 @@ namespace Maths_Tutoring_Program
             if (answer == equation.equationAnswer.Value)
             {
                 Console.WriteLine("Your answer is correct!");
+                corrects++;
             }
             else
             {
                 Console.WriteLine("Your answer is incorrect");
+                incorrects++;
             }
             equation.PrintAnswer();
         }
