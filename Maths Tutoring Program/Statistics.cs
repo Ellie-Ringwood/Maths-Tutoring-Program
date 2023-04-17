@@ -8,10 +8,30 @@ namespace Maths_Tutoring_Program
 {
     internal class Statistics
     {
+        private string _currentUsername;
+        public string currentUsername
+        {
+            get { return _currentUsername; }
+            set { if (value != "") { _currentUsername = value; } }
+        }
+        private int _currentCorrects;
+        public int currentCorrects
+        {
+            get { return _currentCorrects; }
+            set { _currentCorrects = value; }
+        }
+        private int _currentIncorrects;
+        public int currentIncorrects
+        {
+            get { return _currentIncorrects; }
+            set { _currentIncorrects = value; }
+        }
+
         private List<string> users = new List<string>();
         private List<string> corrects = new List<string>();
         private List<string> incorrects = new List<string>();
         private List<string> percentageCorrect = new List<string>();
+
         public Statistics()
         {
             if (File.Exists("statistics.txt"))
@@ -43,8 +63,13 @@ namespace Maths_Tutoring_Program
             }
         }
 
-        public void addStatistic(string userName, int correct, int incorrect, float percentage)
+        public void addStatistic()
         {
+            float percentage = 0.0f;
+            if (currentCorrects + currentIncorrects != 0)
+            {
+                percentage = ((float)currentCorrects / (currentCorrects + currentIncorrects)) * 100;
+            }
             while (true) 
             {
                 if (File.Exists("statistics.txt"))
@@ -57,9 +82,9 @@ namespace Maths_Tutoring_Program
                             value = i+1;
                         }
                     }
-                    users.Insert(value, userName);
-                    corrects.Insert(value, correct.ToString());
-                    incorrects.Insert(value, incorrect.ToString());
+                    users.Insert(value, currentUsername);
+                    corrects.Insert(value, currentCorrects.ToString());
+                    incorrects.Insert(value, currentIncorrects.ToString());
                     percentageCorrect.Insert(value, percentage.ToString());
                     File.Delete("statistics.txt");
                     using (StreamWriter sw = File.AppendText("statistics.txt"))

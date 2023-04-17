@@ -1,4 +1,3 @@
 ﻿using Maths_Tutoring_Program;
 
-Menu menu = new();
-menu.MenuInput();
+Testing testing = new Testing();

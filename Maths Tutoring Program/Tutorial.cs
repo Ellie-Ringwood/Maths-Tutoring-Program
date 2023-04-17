@@ -8,7 +8,7 @@ namespace Maths_Tutoring_Program
 {
     internal class Tutorial
     {
-        public Equation equation = new Equation();
+        private Equation equation = new Equation();
         public void PrintInstructions()
         {
             Console.WriteLine("\nIn the menu, Enter a value (from 1 to 4) for the option you would like. answer.");

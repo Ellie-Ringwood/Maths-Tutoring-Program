@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,33 +9,34 @@ namespace Maths_Tutoring_Program
 {
     internal class Menu
     {
-        public string userName;
-        public int corrects;
-        public int incorrects;
-        public Tutorial tutorial = new Tutorial();
-        public Equation equation = new Equation();
-        public Statistics stats = new Statistics();
-        public Menu()
+        private Tutorial tutorial = new Tutorial();
+        private Equation equation;
+        private Statistics stats;
+
+        public Menu(Statistics stats, Equation equation)
         {
-            Console.WriteLine("Welcome to The LinCode Mathematics Tutoring Program");
+            this.stats = stats;
+            this.equation = equation;
+        }
+
+        public void UserInput()
+        {
+            Console.WriteLine("\nWelcome to The LinCode Mathematics Tutoring Program");
+            tutorial.PrintInstructions();
             Console.WriteLine("Enter Username: ");
             while (true)
             {
-                userName = Console.ReadLine();
-                if (userName == "") 
+                string username = Console.ReadLine();
+                if (username == "")
                 {
                     Console.WriteLine("Username must not be empty, Enter again: ");
                 }
                 else
                 {
+                    stats.currentUsername = username;
                     break;
                 }
             }
-            tutorial.PrintInstructions();
-        }
-
-        public void MenuInput()
-        {
             bool running = true;
             while (running == true)
             {
@@ -54,13 +56,7 @@ namespace Maths_Tutoring_Program
                         stats.PrintStats();
                         break;
                     case "5":
-                        float percentage = 0.0f;
-                        if (corrects+incorrects != 0)
-                        {
-                            percentage = ((float) corrects / (corrects + incorrects)) * 100;
-                            Console.WriteLine(percentage);
-                        }
-                        stats.addStatistic(userName,corrects,incorrects,percentage);
+                        stats.addStatistic();
                         running = false;
                         Console.WriteLine("Goodbye from The LinCode Mathematics Tutoring Program");
                         break;
@@ -88,16 +84,13 @@ namespace Maths_Tutoring_Program
                     Console.WriteLine("Error answer not integer");
                 }
             }
-
-            if (answer == equation.equationAnswer.Value)
+            if (equation.CheckAnswer(answer, stats))
             {
                 Console.WriteLine("Your answer is correct!");
-                corrects++;
             }
             else
             {
-                Console.WriteLine("Your answer is incorrect");
-                incorrects++;
+                Console.WriteLine("Your answer is incorrect!");
             }
             equation.PrintAnswer();
         }

@@ -9,12 +9,18 @@ namespace Maths_Tutoring_Program
 {
     internal class Equation
     {
-        public Pack ValuePack = new Pack(true);
-        public Pack OperationPack = new Pack(false);
-        public List<Card> ValueCards = new List<Card>();
-        public List<Card> OperationCards = new List<Card>();
-        public string[] Operations = { "+", "-", "*", "/" };
-        public ValueCard equationAnswer = new ValueCard();
+        private Pack ValuePack = new Pack(true);
+        private Pack OperationPack = new Pack(false);
+        private List<Card> ValueCards = new List<Card>();
+        private List<Card> OperationCards = new List<Card>();
+        private string[] Operations = { "+", "-", "*", "/" };
+        private ValueCard _equationAnswer = new ValueCard();
+        public ValueCard equationAnswer
+        {
+            get { return _equationAnswer; }
+            set { _equationAnswer = value; }
+        }
+
         public void CreateEquation(int numberOfValues)
         {
             ValuePack.ShuffleCardPack();
@@ -43,6 +49,21 @@ namespace Maths_Tutoring_Program
         {
             Console.Write("\nThe Correct Answer is: ");
             equationAnswer.PrintCard();
+            Console.WriteLine(" ");
+        }
+
+        public bool CheckAnswer(int answer, Statistics statistics)
+        {
+            if (answer == equationAnswer.Value)
+            {
+                statistics.currentCorrects ++;
+                return true;
+            }
+            else
+            {
+                statistics.currentIncorrects++;
+                return false;
+            }
         }
 
         public ValueCard CalculateAnswer()
@@ -50,7 +71,7 @@ namespace Maths_Tutoring_Program
 
             int originalNumOperations = OperationCards.Count();
             int numOperations = 0;
-            for (int i = 0; i < OperationCards.Count();i++)
+            for (int i = 0; i < OperationCards.Count(); i++)
             {
                 if (OperationCards.ElementAt(i).Value == 2 || OperationCards.ElementAt(i).Value == 3)// * or /
                 {
@@ -82,7 +103,7 @@ namespace Maths_Tutoring_Program
                     ValueCards.Insert(i, DoOperator(tempDeck, OperationCards.ElementAt(i)));
                     OperationCards.RemoveAt(i);
                     numOperations++;
-                    if(numOperations < originalNumOperations)
+                    if (numOperations < originalNumOperations)
                     {
                         i--;
                     }
@@ -106,7 +127,7 @@ namespace Maths_Tutoring_Program
                     answer = ValueCards[0].Value * ValueCards[1].Value;
                     break;
                 case "/":
-                    try 
+                    try
                     {
                         answer = ValueCards[0].Value / ValueCards[1].Value;
                     }
